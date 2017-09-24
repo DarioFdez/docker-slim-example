@@ -1,0 +1,21 @@
+version: '2'
+services:
+ 
+  slim-example:
+    image: comicrelief/php7-slim:latest
+    volumes:
+      - ~/proyectos/slim-example/src:/var/www/html
+    ports:
+      - "9001:80"
+    depends_on:
+      - slim-example-mysql
+    environment:
+      APPLICATION_ENV: local
+ 
+  slim-example-mysql:
+    image: mysql:5
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: mypassword
+      MYSQL_DATABASE: slim-example
