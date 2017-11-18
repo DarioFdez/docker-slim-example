@@ -20,7 +20,7 @@ Tener en la máquina instalado composer, docker, docker-compose
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule . index.php [L]`
+RewriteRule . index.php [L]
 ```
 
 - Y un index.php de ejemplo:
